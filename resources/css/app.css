@@ -15,12 +15,45 @@ html {
     display: none;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition-duration: 700ms;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#scroll-progress {
+    transition: height 120ms linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+    .animate-blob,
+    .animate-blob-slow,
+    .animate-blob-slower,
+    .animate-float,
+    .animate-float-slow {
+        animation: none;
+    }
+}
+
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 
     --animate-float: float 6s ease-in-out infinite;
     --animate-float-slow: float 7.5s ease-in-out infinite;
+    --animate-blob: blob 18s ease-in-out infinite;
+    --animate-blob-slow: blob 24s ease-in-out infinite;
+    --animate-blob-slower: blob 30s ease-in-out infinite;
 
     @keyframes float {
         0%,
@@ -29,6 +62,19 @@ html {
         }
         50% {
             transform: translateY(-14px);
+        }
+    }
+
+    @keyframes blob {
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+        33% {
+            transform: translate(30px, -40px) scale(1.08);
+        }
+        66% {
+            transform: translate(-24px, 28px) scale(0.94);
         }
     }
 }

@@ -139,3 +139,104 @@ if (testimonialTrack && testiPrev && testiNext) {
     applyTransform();
     updateProgress();
 }
+
+const revealEls = document.querySelectorAll('.reveal');
+
+if (revealEls.length > 0) {
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-revealed');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+        );
+
+        revealEls.forEach((el) => {
+            const siblings = el.parentElement.querySelectorAll(':scope > .reveal');
+            const index = Array.prototype.indexOf.call(siblings, el);
+            el.style.transitionDelay = `${(index % 3) * 110}ms`;
+            revealObserver.observe(el);
+        });
+    } else {
+        revealEls.forEach((el) => el.classList.add('is-revealed'));
+    }
+}
+
+const progressBar = document.getElementById('scroll-progress');
+
+if (progressBar) {
+    const updateProgress = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.height = `${pct}%`;
+    };
+
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+}
+
+const counterEls = document.querySelectorAll('[data-counter]');
+
+if (counterEls.length > 0) {
+    const animateCounter = (el) => {
+        const target = parseFloat(el.dataset.counter);
+        const decimals = parseInt(el.dataset.decimals || '0', 10);
+        const duration = 1400;
+        const start = performance.now();
+
+        const format = (value) =>
+            decimals > 0
+                ? value.toFixed(decimals)
+                : Math.round(value).toLocaleString('id-ID');
+
+        const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = format(target * eased);
+            if (progress < 1) requestAnimationFrame(tick);
+        };
+
+        requestAnimationFrame(tick);
+    };
+
+    if ('IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.4 }
+        );
+
+        counterEls.forEach((el) => counterObserver.observe(el));
+    } else {
+        counterEls.forEach(animateCounter);
+    }
+}
+
+const heroVisual = document.getElementById('hero-visual');
+const heroSection = document.getElementById('beranda');
+
+if (heroVisual && heroSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const updateParallax = () => {
+        const rect = heroSection.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        const offset = rect.top * 0.18;
+        heroVisual.style.transform = `translateY(${offset}px)`;
+    };
+
+    updateParallax();
+    window.addEventListener('scroll', updateParallax, { passive: true });
+    window.addEventListener('resize', updateParallax);
+}

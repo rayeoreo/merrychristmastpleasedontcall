@@ -20,90 +20,257 @@
 
             <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-                <div class="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+                                  d="M13 2H5a2 2 0 00-2 2v12h13a2 2 0 002-2V4a2 2 0 00-2-2h-5V2a2 2 0 00-2-2H5V1a1 1 0 011-1h6a2 2 0 012 2v0"></path>
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Campaign Massal</h3>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Campaign Message</h3>
                     <p class="mt-3 leading-7 text-slate-600">
-                        Kirim pesan promosi ke ratusan atau ribuan kontak sekaligus
-                        langsung dari smartphone tanpa berhenti.
+                        Mengirim pesan promosi ke banyak kontak secara otomatis
+                        menggunakan campaign.
                     </p>
                 </div>
 
-                <div class="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                                  d="M22 2L11 13M22 2l-7 20-4-9-9-4 22-7z" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Kelola Kontak</h3>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Direct Message</h3>
                     <p class="mt-3 leading-7 text-slate-600">
-                        Bangun dan atur database pelanggan, kelompokkan segmen,
-                        dan kelola daftar kontak dengan mudah.
+                        Mengirim pesan langsung ke kontak target.
                     </p>
                 </div>
 
-                <div class="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                            <circle cx="9" cy="7" r="4" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Penjadwalan Otomatis</h3>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Contact Group</h3>
                     <p class="mt-3 leading-7 text-slate-600">
-                        Jadwalkan pesan promo pada waktu terbaik agar kontak Anda
-                        selalu menerima informasi tepat waktu.
+                        Mengelompokkan pelanggan berdasarkan kategori untuk promosi
+                        yang lebih terarah.
                     </p>
                 </div>
 
-                <div class="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                  d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Laporan Real-time</h3>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Extract Group</h3>
                     <p class="mt-3 leading-7 text-slate-600">
-                        Pantau progress campaign, pesan terkirim, dan performa
-                        pemasaran dengan laporan yang jelas.
+                        Mengambil daftar anggota grup WhatsApp untuk dijadikan
+                        database prospek.
                     </p>
                 </div>
 
-                <div class="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm6 10h6m-6-3h6m-3-3h3" />
+                                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Template Pesan</h3>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Unsaved Contact</h3>
                     <p class="mt-3 leading-7 text-slate-600">
-                        Gunakan template siap pakai untuk mempercepat pembuatan
-                        pesan promosi yang menarik dan efektif.
+                        Mengekstrak nomor WhatsApp yang pernah menghubungi meski
+                        belum tersimpan di kontak.
                     </p>
                 </div>
 
-                <div class="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                  d="M12 2l10 5-10 5L2 7l10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Aman &amp; Pribadi</h3>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Group Sender</h3>
                     <p class="mt-3 leading-7 text-slate-600">
-                        Data kontak dan campaign Anda dikelola dengan aman,
-                        langsung dari perangkat Anda sendiri.
+                        Mengirim pesan ke beberapa grup WhatsApp secara praktis.
                     </p>
                 </div>
 
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Message Template</h3>
+                    <p class="mt-3 leading-7 text-slate-600">
+                        Menyimpan template pesan agar tidak perlu mengetik pesan
+                        yang sama berulang kali.
+                    </p>
+                </div>
+
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Maps Extractor</h3>
+                    <p class="mt-3 leading-7 text-slate-600">
+                        Mengumpulkan data prospek bisnis dari Google Maps.
+                    </p>
+                </div>
+
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="6" y="2" width="12" height="20" rx="2" ry="2" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M11 18h2" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Multi WhatsApp</h3>
+                    <p class="mt-3 leading-7 text-slate-600">
+                        Menggunakan beberapa akun WhatsApp sesuai kebutuhan bisnis.
+                    </p>
+                </div>
+
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Manage Chatbot</h3>
+                    <p class="mt-3 leading-7 text-slate-600">
+                        Mengelola chatbot WhatsApp untuk membalas pelanggan
+                        secara otomatis.
+                    </p>
+                </div>
+
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M12 3a9 9 0 00-9 9 9 9 0 002.6 6.4l.7.6-1 3.2 3.4-1 .6.4A9 9 0 0012 21a9 9 0 009-9 9 9 0 00-9-9z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9.5 9.5h.01M14.5 9.5h.01M9 14a4 4 0 006 0" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Android Based</h3>
+                    <p class="mt-3 leading-7 text-slate-600">
+                        Berjalan langsung di smartphone Android tanpa harus
+                        menggunakan komputer.
+                    </p>
+                </div>
+
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3zM13 13l6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">User Friendly</h3>
+                    <p class="mt-3 leading-7 text-slate-600">
+                        Antarmuka sederhana dan mudah digunakan.
+                    </p>
+                </div>
+
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Free Update</h3>
+                    <p class="mt-3 leading-7 text-slate-600">
+                        Mendapatkan pembaruan aplikasi selama masa lisensi aktif.
+                    </p>
+                </div>
+
+                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="4" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M22 12h-4M6 12H2M12 6V2M12 22v-4" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Support &amp; Tutorial</h3>
+                    <p class="mt-3 leading-7 text-slate-600">
+                        Mendapatkan panduan penggunaan dan dukungan ketika
+                        mengalami kendala.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="panduan" class="scroll-mt-24 bg-slate-50/60 py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+            <div class="mx-auto max-w-2xl text-center">
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600">Video Highlight</span>
+                <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                    Simak highlight <span class="text-blue-600">cara pakai WABlaster PRO</span>
+                </h2>
+                <p class="mt-5 text-lg leading-8 text-slate-600">
+                    Tonton video highlight untuk melihat langsung bagaimana cara
+                    mengatur campaign, mengelola kontak, dan mengekstrak member.
+                </p>
+            </div>
+
+            <div class="mx-auto mt-16 max-w-4xl">
+                <div class="group relative overflow-hidden rounded-3xl bg-blue-600 shadow-2xl shadow-blue-600/25 transition hover:shadow-blue-600/40">
+
+                    <div class="relative z-10 flex flex-col items-center p-10 text-center md:p-20">
+
+                        <a href="https://youtu.be/JHjXdJdEoik?si=XTBP58g6UCXuKiZM"
+                           target="_blank" rel="noopener noreferrer"
+                           class="flex h-20 w-20 items-center justify-center rounded-full bg-white text-blue-600 shadow-xl shadow-blue-950/30 transition group-hover:scale-110"
+                           aria-label="Putar video highlight">
+                            <svg class="ml-1 h-9 w-9" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </a>
+
+                        <h3 class="mt-8 text-2xl font-black tracking-tight text-white sm:text-3xl">
+                            Cara Pakai WABlaster PRO
+                        </h3>
+
+                        <p class="mt-4 max-w-xl text-lg leading-8 text-blue-100">
+                            Simak langkah cepat install aplikasi, import kontak,
+                            hingga menjalankan campaign pertama Anda.
+                        </p>
+
+                        <a href="https://youtu.be/JHjXdJdEoik?si=XTBP58g6UCXuKiZM"
+                           target="_blank" rel="noopener noreferrer"
+                           class="mt-8 inline-flex items-center justify-center rounded-xl bg-white px-8 py-3.5 font-bold text-blue-700 shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-50">
+                            Tonton Highlight
+                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
             </div>
 
         </div>
@@ -202,6 +369,7 @@
                             <p class="mt-1 text-4xl font-black tracking-tight text-blue-600">Rp249.000</p>
                         </div>
                     </div>
+                    
 
                     <ul class="mt-8 flex-1 space-y-4 text-sm text-slate-600">
                         <li class="flex items-center gap-3"><span class="text-blue-600">✓</span> Tahun Berikutnya 199.000</li>
@@ -255,61 +423,7 @@
 
             </div>
 
-            <div class="mt-14">
-                <p class="text-center text-sm font-semibold uppercase tracking-wider text-blue-200">
-                    Metode pembayaran didukung
-                </p>
-
-                <div class="mx-auto mt-6 flex max-w-3xl flex-wrap items-center justify-center gap-3">
-                    <div class="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-bold text-white shadow-sm backdrop-blur">
-                        <svg class="h-5 w-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h2m4 0h2m2 0h1m-13 5h14a2 2 0 002-2V8a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        Bank Transfer
-                    </div>
-
-                    <div class="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white shadow-sm backdrop-blur">
-                        <svg class="h-5 w-5 text-blue-200" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2l2.4 2.4H19v4.6L21.4 11.4a1.4 1.4 0 010 2L19 15.6v4.6h-4.6L12 22.6 9.6 20.2H5v-4.6L2.6 13.4a1.4 1.4 0 010-2L5 8.6V4.4h4.6L12 2zm0 5.2a4.8 4.8 0 100 9.6 4.8 4.8 0 000-9.6zm0 2a2.8 2.8 0 110 5.6 2.8 2.8 0 010-5.6z" />
-                        </svg>
-                        QRIS
-                    </div>
-
-                    <div class="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white shadow-sm backdrop-blur">
-                        <svg class="h-5 w-5 text-blue-200" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 3a9 9 0 00-9 9 9 9 0 002.6 6.4l.7.6-1 3.2 3.4-1 .6.4A9 9 0 0012 21a9 9 0 009-9 9 9 0 00-9-9zm3.8 12.2c-.2.5-1.1 1-1.6 1-.4 0-.9.1-2.3-.6-1.6-.8-3-2.3-3.5-3.3-.4-.8-.4-1.5-.2-2 .1-.3.4-.6.8-.7h.6c.3 0 .5-.1.7.1.3.2.9 1.2 1 1.3.1.1.1.3 0 .4-.4.5-.5.6-.3.9.6 1 1.4 1.8 2 2.2.2.2.3.2.4.1l1-1c.2-.2.3-.2.5 0l1.7 1c.2.1.3.3.2.4z" />
-                        </svg>
-                        DANA
-                    </div>
-
-                    <div class="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white shadow-sm backdrop-blur">
-                        <svg class="h-5 w-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm0 0c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zM5 16c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm0 0c1.66 0 3 1.34 3 3m8-3c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM19 16c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-                        </svg>
-                        GoPay
-                    </div>
-
-                    <div class="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white shadow-sm backdrop-blur">
-                        <svg class="h-5 w-5 text-blue-200" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4 9.2v2.6a1 1 0 01-1 1h-.4v2.6a.8.8 0 01-.8.8h-.2a1.4 1.4 0 01-1.4-1.1v-2.3l-1.1 2.1a1.6 1.6 0 01-1.4.9h-.9a3.3 3.3 0 01-1.5-.3 1 1 0 01-.5-1.3l3.3-5.6v-2a.7.7 0 01.7-.7h2a.7.7 0 01.8.8v1.6h.9a1 1 0 011 1z" />
-                        </svg>
-                        OVO
-                    </div>
-
-                    <div class="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white shadow-sm backdrop-blur">
-                        <svg class="h-5 w-5 text-blue-200" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M6 12a6 6 0 116 6 6 6 0 01-6-6zM2 12a10 10 0 0010 10 10 10 0 10-10-10z" />
-                        </svg>
-                        ShopeePay
-                    </div>
-                </div>
             </div>
-
-            <p class="mt-10 text-center text-sm text-blue-100">
-                * Metode pembayaran &amp; harga yang tampil dapat berubah sewaktu-waktu. Diskon mengikuti kode unik.
-            </p>
-
-        </div>
     </section>
 
     <section id="testimoni" class="scroll-mt-24 bg-white py-20 lg:py-28">
@@ -638,4 +752,5 @@
         </div>
     </footer>
 
+ 
 @endsection

@@ -20,6 +20,8 @@
 
 <body class="overflow-x-hidden bg-white font-sans text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
+    <div id="scroll-progress" class="fixed top-0 right-0 z-[60] h-0 w-1 bg-blue-600" aria-hidden="true"></div>
+
     <a href="#beranda"
        class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-white">
         Langsung ke konten

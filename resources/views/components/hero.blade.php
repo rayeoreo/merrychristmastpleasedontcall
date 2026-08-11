@@ -3,9 +3,9 @@
     <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-blue-100/70 via-sky-50/50 to-white"></div>
 
     <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div class="absolute -top-40 right-[-8%] h-[34rem] w-[34rem] rounded-full bg-blue-200/50 blur-3xl"></div>
-        <div class="absolute top-1/4 left-[-10%] h-[26rem] w-[26rem] rounded-full bg-sky-200/50 blur-3xl"></div>
-        <div class="absolute -bottom-24 left-1/3 h-[24rem] w-[24rem] rounded-full bg-blue-100/60 blur-3xl"></div>
+        <div class="animate-blob absolute -top-40 right-[-8%] h-[34rem] w-[34rem] rounded-full bg-blue-200/50 blur-3xl"></div>
+        <div class="animate-blob-slow absolute top-1/4 left-[-10%] h-[26rem] w-[26rem] rounded-full bg-sky-200/50 blur-3xl"></div>
+        <div class="animate-blob-slower absolute -bottom-24 left-1/3 h-[24rem] w-[24rem] rounded-full bg-blue-100/60 blur-3xl"></div>
     </div>
 
     <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 pt-16 pb-20 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:pt-20 lg:pb-28">
@@ -46,18 +46,7 @@
 
             </div>
 
-            <div class="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-sm text-slate-500 lg:justify-start">
-                <div class="flex items-center gap-2">
-                    <span class="flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-blue-600">✓</span>
-                    Mudah digunakan
-                </div>
-                <div class="flex items-center gap-2">
-                    <span class="flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-blue-600">✓</span>
-                    Hemat waktu
-                </div>
             </div>
-
-        </div>
 
         <div class="relative flex justify-center lg:justify-end">
 
@@ -65,7 +54,7 @@
                 <div class="h-80 w-80 rounded-full bg-gradient-to-tr from-blue-400/25 to-sky-300/25 blur-3xl sm:h-96 sm:w-96 lg:h-[30rem] lg:w-[30rem]"></div>
             </div>
 
-            <div class="relative">
+            <div id="hero-visual" class="relative">
 
                 <img src="{{ asset('images/phone.png') }}"
                      alt="Tampilan aplikasi WABlaster PRO Mobile di smartphone"
@@ -82,7 +71,7 @@
                         </div>
                         <div>
                             <p class="text-xs font-medium text-slate-400">Delivery Rate</p>
-                            <p class="font-bold text-slate-900">99.8%</p>
+                            <p class="font-bold text-slate-900"><span data-counter="99.8" data-decimals="1">0</span>%</p>
                         </div>
                     </div>
                 </div>
@@ -97,7 +86,7 @@
                         </div>
                         <div>
                             <p class="text-xs font-medium text-slate-400">Campaign aktif</p>
-                            <p class="font-bold text-slate-900">248 campaign</p>
+                            <p class="font-bold text-slate-900"><span data-counter="248">0</span> campaign</p>
                         </div>
                     </div>
                 </div>
@@ -112,7 +101,7 @@
                         </div>
                         <div>
                             <p class="text-xs font-medium text-slate-400">Pesan terkirim</p>
-                            <p class="font-bold text-slate-900">10.482 pesan</p>
+                            <p class="font-bold text-slate-900"><span data-counter="10482">0</span> pesan</p>
                         </div>
                     </div>
                 </div>
