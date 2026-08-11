@@ -140,6 +140,20 @@ if (testimonialTrack && testiPrev && testiNext) {
     updateProgress();
 }
 
+document.querySelectorAll('.faq-column').forEach((column) => {
+    const details = Array.from(column.querySelectorAll('details'));
+
+    details.forEach((detail) => {
+        detail.addEventListener('toggle', () => {
+            if (detail.open) {
+                details.forEach((other) => {
+                    if (other !== detail) other.open = false;
+                });
+            }
+        });
+    });
+});
+
 const revealEls = document.querySelectorAll('.reveal');
 
 if (revealEls.length > 0) {

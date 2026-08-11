@@ -5,6 +5,76 @@
     @include('components.navbar')
     @include('components.hero')
 
+    <section id="mitra" class="overflow-hidden bg-blue-600 pb-16 pt-10 lg:pb-20">
+        <div class="mx-auto px-6 lg:px-8">
+            <p class="text-center text-sm font-bold uppercase tracking-wider text-blue-100">
+                Dipercaya oleh mitra kami
+            </p>
+        </div>
+
+        <div class="group relative mt-10">
+            <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-blue-600 to-transparent sm:w-32"></div>
+            <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-blue-600 to-transparent sm:w-32"></div>
+
+            <div class="flex w-max animate-marquee items-center group-hover:[animation-play-state:paused]">
+                @php
+                    $mitraLogos = [
+                        ['images/Mitra/Malang Warehous.png', 'Malang Warehouse'],
+                        ['images/Mitra/Traveiling Bromo.png', 'Traveling Bromo'],
+                        ['images/Mitra/Tukang Indonesia.png', 'Tukang Indonesia'],
+                    ];
+                @endphp
+                @foreach(array_merge($mitraLogos, $mitraLogos) as $m)
+                    <img src="{{ asset($m[0]) }}" alt="{{ $m[1] }}"
+                         class="mr-16 h-[45px] w-auto shrink-0 opacity-80 grayscale brightness-150 transition duration-300 hover:opacity-100 hover:grayscale-0 hover:brightness-100 sm:mr-20 sm:h-[61px]"
+                         loading="lazy">
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section id="perkenalan" class="relative scroll-mt-24 overflow-hidden bg-white py-20 lg:py-28">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+            <div class="reveal text-center">
+
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600">
+                    Memperkenalkan
+                </span>
+
+                <h2 class="mt-2 text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
+                    Software <span class="text-blue-600">WABlaster Pro Mobile</span>
+                </h2>
+
+                <p class="mx-auto mt-3 max-w-3xl text-base font-semibold leading-7 text-slate-700 sm:text-lg">
+                    Solusi pemasaran WhatsApp tanpa repot!
+                </p>
+
+                <p class="mx-auto mt-2 max-w-2xl text-base leading-7 text-slate-600">
+                    Tools yang mampu mengotomatisasi pekerjaan Anda dalam promosi
+                    WhatsApp, mengelola kontak, dan membangun database pelanggan.
+                </p>
+
+            </div>
+
+            <div class="reveal relative mt-8 flex justify-center">
+                <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <div class="h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-blue-400/30 to-sky-300/30 blur-3xl sm:h-[38rem] sm:w-[38rem] lg:h-[48rem] lg:w-[48rem]"></div>
+                </div>
+                <img src="{{ asset('images/wablaster3d-removebg-preview.png') }}"
+                     alt="WABlaster 3D"
+                     class="relative mx-auto h-auto w-[28rem] drop-shadow-2xl sm:w-[36rem] lg:w-[46rem]"
+                     width="736" height="736" loading="eager">
+            </div>
+
+            <div class="reveal mt-10 flex justify-center">
+                <a href="#fitur"
+                   class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-8 py-3.5 text-base font-bold text-white shadow-xl shadow-blue-600/25 transition hover:-translate-y-0.5 hover:bg-blue-700">
+                    Ini Dia Fiturnya
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section id="fitur" class="scroll-mt-24 bg-slate-50/60 py-20 lg:py-28">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -18,9 +88,9 @@
                 </p>
             </div>
 
-            <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-16 flex flex-wrap justify-center gap-6">
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -34,7 +104,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -47,7 +117,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -62,7 +132,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -76,7 +146,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -90,7 +160,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -103,7 +173,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -117,7 +187,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -131,7 +201,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <rect x="6" y="2" width="12" height="20" rx="2" ry="2" />
@@ -145,7 +215,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -159,7 +229,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -175,7 +245,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -188,7 +258,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -201,7 +271,7 @@
                     </p>
                 </div>
 
-                <div class="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10">
+                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10" />
@@ -226,50 +296,26 @@
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
             <div class="mx-auto max-w-2xl text-center">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600">Video Highlight</span>
-                <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                    Simak highlight <span class="text-blue-600">cara pakai WABlaster PRO</span>
+                <h2 class="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+                    Lihat bagaimana <span class="text-blue-600">WABlaster PRO bekerja</span>
                 </h2>
                 <p class="mt-5 text-lg leading-8 text-slate-600">
-                    Tonton video highlight untuk melihat langsung bagaimana cara
-                    mengatur campaign, mengelola kontak, dan mengekstrak member.
+                    Kenali lebih dekat cara WABlaster PRO membantu mengelola campaign,
+                    kontak, dan kebutuhan WhatsApp marketing dalam satu platform.
                 </p>
             </div>
 
-            <div class="mx-auto mt-16 max-w-4xl">
-                <div class="group relative overflow-hidden rounded-3xl bg-blue-600 shadow-2xl shadow-blue-600/25 transition hover:shadow-blue-600/40">
-
-                    <div class="relative z-10 flex flex-col items-center p-10 text-center md:p-20">
-
-                        <a href="https://youtu.be/JHjXdJdEoik?si=XTBP58g6UCXuKiZM"
-                           target="_blank" rel="noopener noreferrer"
-                           class="flex h-20 w-20 items-center justify-center rounded-full bg-white text-blue-600 shadow-xl shadow-blue-950/30 transition group-hover:scale-110"
-                           aria-label="Putar video highlight">
-                            <svg class="ml-1 h-9 w-9" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z" />
-                            </svg>
-                        </a>
-
-                        <h3 class="mt-8 text-2xl font-black tracking-tight text-white sm:text-3xl">
-                            Cara Pakai WABlaster PRO
-                        </h3>
-
-                        <p class="mt-4 max-w-xl text-lg leading-8 text-blue-100">
-                            Simak langkah cepat install aplikasi, import kontak,
-                            hingga menjalankan campaign pertama Anda.
-                        </p>
-
-                        <a href="https://youtu.be/JHjXdJdEoik?si=XTBP58g6UCXuKiZM"
-                           target="_blank" rel="noopener noreferrer"
-                           class="mt-8 inline-flex items-center justify-center rounded-xl bg-white px-8 py-3.5 font-bold text-blue-700 shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-50">
-                            Tonton Highlight
-                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
-
+            <div class="mx-auto mt-16 max-w-6xl">
+                <div class="overflow-hidden rounded-3xl bg-blue-600 shadow-2xl shadow-blue-600/25 ring-1 ring-blue-600/10">
+                    <div class="aspect-video">
+                        <iframe class="h-full w-full"
+                                src="https://www.youtube-nocookie.com/embed/JHjXdJdEoik"
+                                title="Video Demo WABlaster PRO"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
                     </div>
-
                 </div>
             </div>
 
@@ -292,7 +338,7 @@
 
             <div class="mt-16 grid gap-8 md:grid-cols-3">
 
-                <div class="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                <div class="reveal relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 transition">
                     <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-xl font-black text-white shadow-lg shadow-blue-600/25">1</div>
                     <h3 class="mt-6 text-lg font-bold text-slate-900">Unduh &amp; Install</h3>
                     <p class="mt-3 leading-7 text-slate-600">
@@ -301,7 +347,7 @@
                     </p>
                 </div>
 
-                <div class="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                <div class="reveal relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 transition">
                     <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-xl font-black text-white shadow-lg shadow-blue-600/25">2</div>
                     <h3 class="mt-6 text-lg font-bold text-slate-900">Import Kontak</h3>
                     <p class="mt-3 leading-7 text-slate-600">
@@ -310,7 +356,7 @@
                     </p>
                 </div>
 
-                <div class="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                <div class="reveal relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 transition">
                     <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-xl font-black text-white shadow-lg shadow-blue-600/25">3</div>
                     <h3 class="mt-6 text-lg font-bold text-slate-900">Jalankan Campaign</h3>
                     <p class="mt-3 leading-7 text-slate-600">
@@ -344,16 +390,16 @@
                         Paling Recommended
                     </span>
 
-                    <div class="flex items-center gap-4">
+                    <div class="flex flex-col items-center gap-4">
                         <img src="{{ asset('images/wabpromobform.png') }}" alt="WABlasterPro Mobile"
-                             class="h-16 w-16 shrink-0 rounded-2xl object-contain">
-                        <div>
+                             class="h-28 w-28 rounded-2xl object-contain">
+                        <div class="text-center">
                             <h3 class="text-lg font-bold text-slate-900">WABlaster PRO Mobile</h3>
-                            <p class="mt-1 text-sm text-slate-500">WABlasterPro Mobile &middot; Sekali bayar</p>
+                            <p class="mt-1 text-sm text-slate-500">Sekali bayar</p>
                         </div>
                     </div>
 
-                    <div class="mt-6 rounded-2xl bg-blue-50 p-5">
+                    <div class="mt-8 rounded-2xl bg-blue-50 p-6">
                         <div class="flex items-baseline justify-between">
                             <span class="text-sm font-semibold text-slate-500">Harga Normal</span>
                             <span class="text-xl font-bold text-slate-400 line-through decoration-red-400">
@@ -369,17 +415,10 @@
                             <p class="mt-1 text-4xl font-black tracking-tight text-blue-600">Rp249.000</p>
                         </div>
                     </div>
-                    
-
-                    <ul class="mt-8 flex-1 space-y-4 text-sm text-slate-600">
-                        <li class="flex items-center gap-3"><span class="text-blue-600">✓</span> Tahun Berikutnya 199.000</li>
-                        <li class="flex items-center gap-3"><span class="text-blue-600">✓</span> Penjadwalan otomatis</li>
-                        <li class="flex items-center gap-3"><span class="text-blue-600">✓</span> Laporan real-time</li>
-                    </ul>
 
                     <a href="#download"
                        class="mt-8 flex w-full items-center justify-center rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-bold text-white shadow-xl shadow-blue-600/25 transition hover:-translate-y-0.5 hover:bg-blue-700">
-                        Beli Sekarang &ndash; Rp249.999
+                        Beli Sekarang
                     </a>
                 </div>
 
@@ -388,10 +427,16 @@
                         Coming Soon
                     </span>
 
-                    <h3 class="text-lg font-bold text-white">One Time Payment</h3>
-                    <p class="mt-1 text-sm text-blue-100">Opsi pembayaran sekali untuk selamanya</p>
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="{{ asset('images/wabpromobform.png') }}" alt="One Time Payment"
+                             class="h-28 w-28 rounded-2xl object-contain opacity-90">
+                        <div class="text-center">
+                            <h3 class="text-lg font-bold text-white">One Time Payment</h3>
+                            <p class="mt-1 text-sm text-blue-100">Pembayaran sekali untuk selamanya</p>
+                        </div>
+                    </div>
 
-                    <div class="mt-6 rounded-2xl bg-white/10 p-5 ring-1 ring-white/20">
+                    <div class="mt-8 rounded-2xl bg-white/10 p-6 ring-1 ring-white/20">
                         <div class="flex items-baseline justify-between">
                             <span class="text-sm font-semibold text-blue-100">Harga Normal</span>
                             <span class="text-xl font-bold text-blue-200 line-through decoration-red-400">
@@ -408,19 +453,18 @@
                         </div>
                     </div>
 
-                    <ul class="mt-8 flex-1 space-y-4 text-sm text-blue-50">
-                        <li class="flex items-center gap-3"><span class="text-white">✓</span> Semua fitur WABPROMOB</li>
-                        <li class="flex items-center gap-3"><span class="text-white">✓</span> Pembayaran sekali saja</li>
-                        <li class="flex items-center gap-3"><span class="text-white">✓</span> Tanpa biaya bulanan</li>
-                        <li class="flex items-center gap-3"><span class="text-white">✓</span> Upgrade seumur hidup</li>
-                    </ul>
-
                     <button type="button" disabled
                             class="mt-8 flex w-full cursor-not-allowed items-center justify-center rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-bold text-blue-100/60 opacity-70">
                         Segera Hadir
                     </button>
                 </div>
 
+            </div>
+
+            <div class="mt-12 flex flex-col items-center gap-4 text-center">
+                <p class="text-sm font-semibold text-blue-100">Metode Pembayaran</p>
+                <img src="{{ asset('images/payment/payment.png') }}" alt="Metode Pembayaran"
+                     class="h-12 w-auto object-contain opacity-90">
             </div>
 
             </div>
@@ -609,7 +653,7 @@
     </section>
 
     <section id="faq" class="scroll-mt-24 bg-slate-50/60 py-20 lg:py-28">
-        <div class="mx-auto max-w-3xl px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl px-6 lg:px-8">
 
             <div class="text-center">
                 <span class="text-sm font-bold uppercase tracking-wider text-blue-600">FAQ</span>
@@ -618,12 +662,12 @@
                 </h2>
             </div>
 
-            <div class="mt-12 space-y-4">
+            <div class="faq-column mt-12 flex flex-col gap-4">
 
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm open:border-blue-200">
                     <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
                         Apakah WABlaster PRO Mobile mendukung perangkat iOS?
-                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition group-open:rotate-45">+</span>
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-transform duration-300 group-open:rotate-45">+</span>
                     </summary>
                     <p class="mt-4 leading-7 text-slate-600">
                         Saat ini WABlaster PRO Mobile dirancang khusus untuk perangkat
@@ -634,7 +678,7 @@
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm open:border-blue-200">
                     <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
                         Berapa jumlah kontak yang bisa saya kelola?
-                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition group-open:rotate-45">+</span>
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-transform duration-300 group-open:rotate-45">+</span>
                     </summary>
                     <p class="mt-4 leading-7 text-slate-600">
                         Pada paket Pro, kontak dapat dikelola tanpa batas sehingga
@@ -645,7 +689,7 @@
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm open:border-blue-200">
                     <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
                         Apakah data pelanggan saya aman?
-                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition group-open:rotate-45">+</span>
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-transform duration-300 group-open:rotate-45">+</span>
                     </summary>
                     <p class="mt-4 leading-7 text-slate-600">
                         Ya. Semua data kontak dan campaign diproses langsung dari
@@ -655,12 +699,34 @@
 
                 <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm open:border-blue-200">
                     <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
+                        Bagaimana proses pembayaran dilakukan?
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-transform duration-300 group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 leading-7 text-slate-600">
+                        Pembayaran dilakukan satu kali via transfer dan aplikasi langsung
+                        dikirim setelah pembayaran terverifikasi.
+                    </p>
+                </details>
+
+                <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm open:border-blue-200">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
                         Bagaimana jika saya butuh bantuan?
-                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition group-open:rotate-45">+</span>
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-transform duration-300 group-open:rotate-45">+</span>
                     </summary>
                     <p class="mt-4 leading-7 text-slate-600">
                         Kami menyediakan dukungan untuk semua pelanggan. Pengguna paket
                         Bisnis mendapatkan prioritas dukungan dan onboarding khusus.
+                    </p>
+                </details>
+
+                <details class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm open:border-blue-200">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
+                        Apakah tersedia garansi atau update?
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-transform duration-300 group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 leading-7 text-slate-600">
+                        Ya, pembelian termasuk garansi dan update fitur selama masa
+                        berlaku lisensi aplikasi Anda.
                     </p>
                 </details>
 
@@ -671,28 +737,27 @@
 
     <section id="download" class="scroll-mt-24 bg-white py-20 lg:py-28">
         <div class="mx-auto max-w-5xl px-6 lg:px-8">
-            <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-sky-500 px-8 py-16 text-center shadow-2xl shadow-blue-600/30 sm:px-16">
-                <div class="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-white/10 blur-2xl"></div>
-                <div class="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-white/10 blur-2xl"></div>
+            <div class="flex flex-col items-center overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-sky-500 px-6 py-16 text-center shadow-2xl shadow-blue-600/30 sm:px-16">
 
-                <h2 class="relative mx-auto max-w-2xl text-3xl font-black tracking-tight text-white sm:text-4xl">
+                <h2 class="mx-auto max-w-2xl text-3xl font-black tracking-tight text-white sm:text-4xl">
                     Siap meningkatkan pemasaran WhatsApp bisnis Anda?
                 </h2>
-                <p class="relative mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-50">
+                <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-50">
                     Unduh WABlaster PRO Mobile sekarang dan mulailah menjalankan
                     campaign promosi secara efisien dari smartphone Anda.
                 </p>
 
-                <div id="kontak" class="relative mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <div id="kontak" class="mt-9 flex w-full max-w-md flex-col items-center gap-4 sm:flex-row sm:max-w-none">
                     <a href="#download"
-                       class="inline-flex w-full items-center justify-center rounded-xl bg-white px-8 py-4 text-sm font-bold text-blue-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-blue-50 sm:w-auto">
+                       class="flex w-full items-center justify-center rounded-xl bg-white px-8 py-4 text-sm font-bold text-blue-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-blue-50 sm:w-auto">
                         Download Aplikasi
                     </a>
                     <a href="#kontak"
-                       class="inline-flex w-full items-center justify-center rounded-xl border border-white/40 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white/20 sm:w-auto">
+                       class="flex w-full items-center justify-center rounded-xl border border-white/40 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white/20 sm:w-auto">
                         Hubungi Kami
                     </a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -710,17 +775,6 @@
                         Solusi WhatsApp Marketing Automation untuk membantu bisnis
                         menjangkau pelanggan lebih cepat, mudah, dan otomatis.
                     </p>
-                    <div class="mt-6 flex gap-3">
-                        <a href="#" class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 transition hover:border-blue-300 hover:text-blue-600" aria-label="Instagram">
-                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2zm0 3.6a6.3 6.3 0 100 12.6 6.3 6.3 0 000-12.6zm0 2.2a4.1 4.1 0 110 8.2 4.1 4.1 0 010-8.2zm4.9-3.3a1.35 1.35 0 100 2.7 1.35 1.35 0 000-2.7z"/></svg>
-                        </a>
-                        <a href="#" class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 transition hover:border-blue-300 hover:text-blue-600" aria-label="Facebook">
-                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
-                        </a>
-                        <a href="#" class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 transition hover:border-blue-300 hover:text-blue-600" aria-label="YouTube">
-                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 00-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 00.5 6.2 32 32 0 000 12a32 32 0 00.5 5.8 3 3 0 002.1 2.2c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.2A32 32 0 0024 12a32 32 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
-                        </a>
-                    </div>
                 </div>
 
                 <div>
@@ -744,9 +798,35 @@
 
             </div>
 
-            <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 text-sm text-slate-500 sm:flex-row">
+            <div class="mt-12 flex flex-col items-center justify-between gap-6 border-t border-slate-200 pt-8 text-sm text-slate-500 sm:flex-row">
                 <p>&copy; {{ date('Y') }} WABlaster PRO Mobile. Hak cipta dilindungi.</p>
-                <p>Dibuat dengan teknologi modern.</p>
+                <div class="flex gap-3">
+                    <a href="#" class="socials socials-tiktok" aria-label="TikTok">
+                        <svg class="socials-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="socials socials-instagram" aria-label="Instagram">
+                        <svg class="socials-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2zm0 3.6a6.3 6.3 0 100 12.6 6.3 6.3 0 000-12.6zm0 2.2a4.1 4.1 0 110 8.2 4.1 4.1 0 010-8.2zm4.9-3.3a1.35 1.35 0 100 2.7 1.35 1.35 0 000-2.7z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="socials socials-youtube" aria-label="YouTube">
+                        <svg class="socials-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.5 6.2a3 3 0 00-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 00.5 6.2 32 32 0 000 12a32 32 0 00.5 5.8 3 3 0 002.1 2.2c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.2A32 32 0 0024 12a32 32 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="socials socials-threads" aria-label="Threads">
+                        <svg class="socials-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 013.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 00-2.215-.221z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/6281333444233" target="_blank" rel="noopener noreferrer" class="socials socials-whatsapp" aria-label="WhatsApp">
+                        <svg class="socials-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
         </div>
