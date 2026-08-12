@@ -5,35 +5,67 @@
     @include('components.navbar')
     @include('components.hero')
 
-    <section id="mitra" class="overflow-hidden bg-blue-600 pb-16 pt-10 lg:pb-20">
-        <div class="mx-auto px-6 lg:px-8">
-            <p class="text-center text-sm font-bold uppercase tracking-wider text-blue-100">
-                Dipercaya oleh mitra kami
-            </p>
+    <section id="mitra" class="relative overflow-hidden bg-slate-50 pb-20 pt-14 lg:pb-24">
+        <div class="pointer-events-none absolute inset-0 bg-grain opacity-60" aria-hidden="true"></div>
+
+        <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div class="absolute -top-32 right-[-6%] h-80 w-80 rounded-full bg-blue-200/40 blur-3xl"></div>
+            <div class="absolute -bottom-24 left-[-8%] h-72 w-72 rounded-full bg-sky-100/60 blur-3xl"></div>
         </div>
 
-        <div class="group relative mt-10">
-            <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-blue-600 to-transparent sm:w-32"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-blue-600 to-transparent sm:w-32"></div>
+        <div class="relative mx-auto max-w-6xl px-6 lg:px-8">
+            <div class="reveal flex flex-col items-start gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="font-serif text-lg italic text-blue-600">
+                        Dipercaya oleh mitra kami
+                    </p>
+                    <h2 class="mt-2 max-w-md text-balance text-2xl font-black tracking-tight text-stone-900 sm:text-3xl">
+                        Mereka yang sudah membuktikan hasilnya
+                    </h2>
+                </div>
+                <p class="max-w-xs text-balance text-sm leading-6 text-stone-500">
+                    Kami bekerja sama dengan bisnis lokal yang memakai WABlaster PRO setiap hari.
+                </p>
+            </div>
 
-            <div class="flex w-max animate-marquee items-center group-hover:[animation-play-state:paused]">
-                @php
-                    $mitraLogos = [
-                        ['images/Mitra/Malang Warehous.png', 'Malang Warehouse'],
-                        ['images/Mitra/Traveiling Bromo.png', 'Traveling Bromo'],
-                        ['images/Mitra/Tukang Indonesia.png', 'Tukang Indonesia'],
-                    ];
-                @endphp
-                @foreach(array_merge($mitraLogos, $mitraLogos) as $m)
-                    <img src="{{ asset($m[0]) }}" alt="{{ $m[1] }}"
-                         class="mr-16 h-[45px] w-auto shrink-0 opacity-80 grayscale brightness-150 transition duration-300 hover:opacity-100 hover:grayscale-0 hover:brightness-100 sm:mr-20 sm:h-[61px]"
+            <div class="mt-14 grid gap-5 sm:grid-cols-3 sm:items-stretch">
+
+                <div class="reveal relative col-span-1 flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.06),0_12px_32px_-12px_rgba(120,90,30,0.18)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 sm:col-span-2 sm:row-span-2 sm:p-9">
+                    <span class="inline-flex w-max items-center rounded-full bg-blue-100 px-3 py-1 text-[11px] font-bold tracking-wide text-blue-800">
+                        Mitra Utama
+                    </span>
+                    <img src="{{ asset('images/Mitra/Traveiling Bromo.png') }}" alt="Traveling Bromo"
+                         class="mx-auto my-6 h-16 w-auto object-contain sm:h-20"
                          loading="lazy">
-                @endforeach
+                    <div>
+                        <p class="text-balance font-serif text-base italic leading-7 text-stone-600">
+                            "Menjangkau pelanggan perjalanan jadi jauh lebih cepat sejak memakai WABlaster PRO."
+                        </p>
+                        <p class="mt-3 text-sm font-bold text-stone-900">Traveling Bromo</p>
+                        <p class="text-xs text-stone-400">Jasa perjalanan &middot; Malang</p>
+                    </div>
+                </div>
+
+                <div class="reveal flex flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.05)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1">
+                    <img src="{{ asset('images/Mitra/Malang Warehous.png') }}" alt="Malang Warehouse"
+                         class="h-11 w-auto object-contain"
+                         loading="lazy">
+                    <span class="text-xs font-semibold text-stone-400">Malang Warehouse</span>
+                </div>
+
+                <div class="reveal flex flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.05)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1">
+                    <img src="{{ asset('images/Mitra/Tukang Indonesia.png') }}" alt="Tukang Indonesia"
+                         class="h-11 w-auto object-contain"
+                         loading="lazy">
+                    <span class="text-xs font-semibold text-stone-400">Tukang Indonesia</span>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="perkenalan" class="relative scroll-mt-24 overflow-hidden bg-white py-20 lg:py-28">
+    <section id="perkenalan" class="relative scroll-mt-24 overflow-hidden bg-slate-50 py-20 lg:py-28">
+        <div class="pointer-events-none absolute inset-0 bg-grain opacity-50" aria-hidden="true"></div>
         <div class="mx-auto max-w-6xl px-6 lg:px-8">
             <div class="reveal text-center">
 
@@ -75,216 +107,164 @@
         </div>
     </section>
 
-    <section id="fitur" class="scroll-mt-24 bg-slate-50/60 py-20 lg:py-28">
+    <section id="fitur" class="relative scroll-mt-24 overflow-hidden bg-slate-50 py-20 lg:py-28">
+        <div class="pointer-events-none absolute inset-0 bg-grain opacity-50" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div class="absolute top-1/4 -left-16 h-64 w-64 rounded-full bg-blue-100/50 blur-3xl"></div>
+            <div class="absolute bottom-0 -right-12 h-56 w-56 rounded-full bg-sky-100/50 blur-3xl"></div>
+        </div>
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
-            <div class="mx-auto max-w-2xl text-center">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600">Fitur Unggulan</span>
-                <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+            <div class="reveal relative mx-auto max-w-2xl text-center">
+                <p class="font-serif text-lg italic text-blue-600">Fitur Unggulan</p>
+                <h2 class="mt-2 text-balance text-3xl font-black tracking-tight text-stone-950 sm:text-4xl">
                     Semua yang Anda butuhkan untuk <span class="text-blue-600">pemasaran WhatsApp</span>
                 </h2>
-                <p class="mt-5 text-lg leading-8 text-slate-600">
+                <p class="mx-auto mt-5 max-w-2xl text-balance text-lg leading-8 text-stone-600">
                     Kendalikan campaign pemasaran dari satu aplikasi, langsung dari smartphone.
                 </p>
             </div>
 
-            <div class="mt-16 flex flex-wrap justify-center gap-6">
+            <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M13 2H5a2 2 0 00-2 2v12h13a2 2 0 002-2V4a2 2 0 00-2-2h-5V2a2 2 0 00-2-2H5V1a1 1 0 011-1h6a2 2 0 012 2v0"></path>
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 2H5a2 2 0 00-2 2v12h13a2 2 0 002-2V4a2 2 0 00-2-2h-5V2a2 2 0 00-2-2H5V1a1 1 0 011-1h6a2 2 0 012 2v0"></path>
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Campaign Message</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mengirim pesan promosi ke banyak kontak secara otomatis
-                        menggunakan campaign.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Campaign Message</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mengirim pesan promosi ke banyak kontak secara otomatis menggunakan campaign.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M22 2L11 13M22 2l-7 20-4-9-9-4 22-7z" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 2L11 13M22 2l-7 20-4-9-9-4 22-7z" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Direct Message</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mengirim pesan langsung ke kontak target.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Direct Message</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mengirim pesan langsung ke kontak target.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-                            <circle cx="9" cy="7" r="4" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /><circle cx="9" cy="7" r="4" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Contact Group</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mengelompokkan pelanggan berdasarkan kategori untuk promosi
-                        yang lebih terarah.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Contact Group</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mengelompokkan pelanggan berdasarkan kategori untuk promosi yang lebih terarah.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Extract Group</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mengambil daftar anggota grup WhatsApp untuk dijadikan
-                        database prospek.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Extract Group</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mengambil daftar anggota grup WhatsApp untuk dijadikan database prospek.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Unsaved Contact</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mengekstrak nomor WhatsApp yang pernah menghubungi meski
-                        belum tersimpan di kontak.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Unsaved Contact</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mengekstrak nomor WhatsApp yang pernah menghubungi meski belum tersimpan di kontak.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 2l10 5-10 5L2 7l10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l10 5-10 5L2 7l10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Group Sender</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mengirim pesan ke beberapa grup WhatsApp secara praktis.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Group Sender</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mengirim pesan ke beberapa grup WhatsApp secara praktis.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Message Template</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Menyimpan template pesan agar tidak perlu mengetik pesan
-                        yang sama berulang kali.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Message Template</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Menyimpan template pesan agar tidak perlu mengetik pesan yang sama berulang kali.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                            <circle cx="12" cy="10" r="3" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Maps Extractor</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mengumpulkan data prospek bisnis dari Google Maps.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Maps Extractor</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mengumpulkan data prospek bisnis dari Google Maps.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <rect x="6" y="2" width="12" height="20" rx="2" ry="2" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M11 18h2" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="6" y="2" width="12" height="20" rx="2" ry="2" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 18h2" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Multi WhatsApp</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Menggunakan beberapa akun WhatsApp sesuai kebutuhan bisnis.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Multi WhatsApp</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Menggunakan beberapa akun WhatsApp sesuai kebutuhan bisnis.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Manage Chatbot</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mengelola chatbot WhatsApp untuk membalas pelanggan
-                        secara otomatis.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Manage Chatbot</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mengelola chatbot WhatsApp untuk membalas pelanggan secara otomatis.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 3a9 9 0 00-9 9 9 9 0 002.6 6.4l.7.6-1 3.2 3.4-1 .6.4A9 9 0 0012 21a9 9 0 009-9 9 9 0 00-9-9z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M9.5 9.5h.01M14.5 9.5h.01M9 14a4 4 0 006 0" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3a9 9 0 00-9 9 9 9 0 002.6 6.4l.7.6-1 3.2 3.4-1 .6.4A9 9 0 0012 21a9 9 0 009-9 9 9 0 00-9-9z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.5 9.5h.01M14.5 9.5h.01M9 14a4 4 0 006 0" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Android Based</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Berjalan langsung di smartphone Android tanpa harus
-                        menggunakan komputer.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Android Based</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Berjalan langsung di smartphone Android tanpa harus menggunakan komputer.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3zM13 13l6 6" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3zM13 13l6 6" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">User Friendly</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Antarmuka sederhana dan mudah digunakan.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">User Friendly</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Antarmuka sederhana dan mudah digunakan.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Free Update</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mendapatkan pembaruan aplikasi selama masa lisensi aktif.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Free Update</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mendapatkan pembaruan aplikasi selama masa lisensi aktif.</p>
                 </div>
 
-                <div class="reveal group w-full rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/25">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10" />
-                            <circle cx="12" cy="12" r="4" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M22 12h-4M6 12H2M12 6V2M12 22v-4" />
+                <div class="reveal group flex flex-col rounded-2xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-600/25">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 12h-4M6 12H2M12 6V2M12 22v-4" />
                         </svg>
                     </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Support &amp; Tutorial</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Mendapatkan panduan penggunaan dan dukungan ketika
-                        mengalami kendala.
-                    </p>
+                    <h3 class="mt-5 text-lg font-bold text-stone-900">Support &amp; Tutorial</h3>
+                    <p class="mt-2.5 leading-7 text-stone-600">Mendapatkan panduan penggunaan dan dukungan ketika mengalami kendala.</p>
                 </div>
 
             </div>
@@ -292,28 +272,34 @@
         </div>
     </section>
 
-    <section id="panduan" class="scroll-mt-24 bg-slate-50/60 py-20 lg:py-28">
+<section id="panduan" class="relative scroll-mt-24 overflow-hidden bg-slate-50 py-20 lg:py-28">
+        <div class="pointer-events-none absolute inset-0 bg-grain opacity-50" aria-hidden="true"></div>
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
-            <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+            <div class="reveal relative mx-auto max-w-3xl text-center">
+                <p class="font-serif text-lg italic text-blue-600">
+                    Video Demo
+                </p>
+                <h2 class="mt-2 text-balance text-3xl font-black tracking-tight text-stone-950 sm:text-4xl">
                     Lihat bagaimana <span class="text-blue-600">WABlaster PRO bekerja</span>
                 </h2>
-                <p class="mt-5 text-lg leading-8 text-slate-600">
+                <p class="mx-auto mt-5 max-w-2xl text-balance text-lg leading-8 text-stone-600">
                     Kenali lebih dekat cara WABlaster PRO membantu mengelola campaign,
                     kontak, dan kebutuhan WhatsApp marketing dalam satu platform.
                 </p>
             </div>
 
-            <div class="mx-auto mt-16 max-w-6xl">
-                <div class="overflow-hidden rounded-3xl bg-blue-600 shadow-2xl shadow-blue-600/25 ring-1 ring-blue-600/10">
-                    <div class="aspect-video">
-                        <iframe class="h-full w-full"
+            <div class="reveal mx-auto mt-16 max-w-6xl">
+                <div class="relative overflow-hidden rounded-3xl bg-stone-100/60 p-2 shadow-xl shadow-stone-900/10 ring-1 ring-stone-900/10 sm:p-3">
+                    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent" aria-hidden="true"></div>
+                    <div class="relative aspect-video min-h-[28rem] overflow-hidden rounded-2xl">
+                        <iframe class="absolute inset-0 h-full w-full"
                                 src="https://www.youtube-nocookie.com/embed/JHjXdJdEoik"
                                 title="Video Demo WABlaster PRO"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
+                                allowfullscreen
+                                loading="lazy">
                         </iframe>
                     </div>
                 </div>
@@ -322,47 +308,41 @@
         </div>
     </section>
 
-    <section id="cara-kerja" class="py-20 lg:py-28">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="cara-kerja" class="relative scroll-mt-24 overflow-hidden bg-slate-50 py-20 lg:py-28">
+        <div class="pointer-events-none absolute inset-0 bg-grain opacity-40" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div class="absolute top-1/3 -right-16 h-64 w-64 rounded-full bg-blue-100/50 blur-3xl"></div>
+        </div>
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
 
-            <div class="mx-auto max-w-2xl text-center">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600">Cara Kerja</span>
-                <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+            <div class="reveal mx-auto max-w-2xl text-center">
+                <p class="font-serif text-lg italic text-blue-600">Cara Kerja</p>
+                <h2 class="mt-2 text-balance text-3xl font-black tracking-tight text-stone-950 sm:text-4xl">
                     Mulai dalam 3 langkah mudah
                 </h2>
-                <p class="mt-5 text-lg leading-8 text-slate-600">
-                    Tidak perlu keahlian teknis. WABlaster PRO Mobile siap dipakai
-                    dalam hitungan menit.
+                <p class="mx-auto mt-5 max-w-2xl text-balance text-lg leading-8 text-stone-600">
+                    Tidak perlu keahlian teknis. WABlaster PRO Mobile siap dipakai dalam hitungan menit.
                 </p>
             </div>
 
-            <div class="mt-16 grid gap-8 md:grid-cols-3">
+            <div class="mt-16 grid gap-6 md:grid-cols-3">
 
-                <div class="reveal relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 transition">
+                <div class="reveal relative flex flex-col rounded-2xl bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
                     <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-xl font-black text-white shadow-lg shadow-blue-600/25">1</div>
-                    <h3 class="mt-6 text-lg font-bold text-slate-900">Unduh &amp; Install</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Unduh aplikasi WABlaster PRO Mobile dan install di perangkat
-                        Android Anda.
-                    </p>
+                    <h3 class="mt-6 text-lg font-bold text-stone-900">Unduh &amp; Install</h3>
+                    <p class="mt-3 leading-7 text-stone-600">Unduh aplikasi WABlaster PRO Mobile dan install di perangkat Android Anda.</p>
                 </div>
 
-                <div class="reveal relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 transition">
+                <div class="reveal relative flex flex-col rounded-2xl bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
                     <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-xl font-black text-white shadow-lg shadow-blue-600/25">2</div>
-                    <h3 class="mt-6 text-lg font-bold text-slate-900">Import Kontak</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Tambahkan atau import daftar kontak pelanggan, lalu kelompokkan
-                        sesuai kebutuhan bisnis Anda.
-                    </p>
+                    <h3 class="mt-6 text-lg font-bold text-stone-900">Import Kontak</h3>
+                    <p class="mt-3 leading-7 text-stone-600">Tambahkan atau import daftar kontak pelanggan, lalu kelompokkan sesuai kebutuhan bisnis Anda.</p>
                 </div>
 
-                <div class="reveal relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-600/10 transition">
+                <div class="reveal relative flex flex-col rounded-2xl bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(120,90,30,0.12)] ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(0,0,0,0.06),0_16px_40px_-12px_rgba(120,90,30,0.2)]">
                     <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-xl font-black text-white shadow-lg shadow-blue-600/25">3</div>
-                    <h3 class="mt-6 text-lg font-bold text-slate-900">Jalankan Campaign</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
-                        Kirim pesan promosi terjadwal dan pantau hasilnya secara
-                        real-time dari panel aplikasi.
-                    </p>
+                    <h3 class="mt-6 text-lg font-bold text-stone-900">Jalankan Campaign</h3>
+                    <p class="mt-3 leading-7 text-stone-600">Kirim pesan promosi terjadwal dan pantau hasilnya secara real-time dari panel aplikasi.</p>
                 </div>
 
             </div>
@@ -370,23 +350,28 @@
         </div>
     </section>
 
-    <section id="harga" class="scroll-mt-24 bg-gradient-to-b from-blue-700 via-blue-600 to-blue-700 py-20 lg:py-28">
-        <div class="mx-auto max-w-5xl px-6 lg:px-8">
+<section id="harga" class="relative scroll-mt-24 overflow-hidden bg-slate-50 py-20 lg:py-28">
+        <div class="pointer-events-none absolute inset-0 bg-grain opacity-50" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div class="absolute top-1/2 -left-16 h-80 w-80 rounded-full bg-blue-100/50 blur-3xl"></div>
+            <div class="absolute bottom-0 -right-12 h-72 w-72 rounded-full bg-sky-100/50 blur-3xl"></div>
+        </div>
+        <div class="relative mx-auto max-w-5xl px-6 lg:px-8">
 
             <div class="mx-auto max-w-2xl text-center">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-200">Paket Harga</span>
-                <h2 class="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl">
+                <p class="font-serif text-lg italic text-blue-600">Paket Harga</p>
+                <h2 class="mt-2 text-balance text-3xl font-black tracking-tight text-stone-950 sm:text-4xl">
                     Pilih paket yang sesuai kebutuhan
                 </h2>
-                <p class="mt-5 text-lg leading-8 text-blue-100">
+                <p class="mx-auto mt-5 max-w-2xl text-balance text-lg leading-8 text-stone-600">
                     Satu kali bayar untuk otomatisasi pemasaran WhatsApp Anda.
                 </p>
             </div>
 
             <div class="mx-auto mt-16 grid max-w-4xl gap-8 lg:grid-cols-2">
 
-                <div class="relative flex flex-col rounded-3xl bg-white p-8 shadow-2xl shadow-blue-900/25 ring-4 ring-white/20 lg:ring-blue-400">
-                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-to-r from-yellow-400 to-amber-400 px-4 py-1 text-xs font-black uppercase tracking-wide text-blue-900 shadow-lg">
+                <div class="relative flex flex-col rounded-3xl bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_12px_32px_-12px_rgba(59,130,246,0.25)] ring-1 ring-stone-900/5 lg:ring-blue-400/40">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-blue-600 px-4 py-1 text-xs font-black uppercase tracking-wide text-white shadow-lg">
                         Paling Recommended
                     </span>
 
@@ -394,24 +379,24 @@
                         <img src="{{ asset('images/wabpromobform.png') }}" alt="WABlasterPro Mobile"
                              class="h-28 w-28 rounded-2xl object-contain">
                         <div class="text-center">
-                            <h3 class="text-lg font-bold text-slate-900">WABlaster PRO Mobile</h3>
-                            <p class="mt-1 text-sm text-slate-500">Sekali bayar</p>
+                            <h3 class="text-lg font-bold text-stone-900">WABlaster PRO Mobile</h3>
+                            <p class="mt-1 text-sm text-stone-500">Sekali bayar</p>
                         </div>
                     </div>
 
-                    <div class="mt-8 rounded-2xl bg-blue-50 p-6">
+                    <div class="mt-8 rounded-2xl bg-stone-50 p-6">
                         <div class="flex items-baseline justify-between">
-                            <span class="text-sm font-semibold text-slate-500">Harga Normal</span>
-                            <span class="text-xl font-bold text-slate-400 line-through decoration-red-400">
+                            <span class="text-sm font-semibold text-stone-500">Harga Normal</span>
+                            <span class="text-xl font-bold text-stone-400 line-through decoration-red-400">
                                 Rp497.002
                             </span>
                         </div>
                         <div class="mt-3 flex items-baseline justify-between">
-                            <span class="text-sm font-semibold text-slate-500">Diskon</span>
-                            <span class="text-lg font-bold text-yellow-600">−Rp248.501</span>
+                            <span class="text-sm font-semibold text-stone-500">Diskon</span>
+                            <span class="text-lg font-bold text-blue-600">&minus;Rp248.501</span>
                         </div>
-                        <div class="mt-4 border-t border-blue-100 pt-4">
-                            <p class="text-sm font-semibold text-slate-500">Total &ndash; Bayar</p>
+                        <div class="mt-4 border-t border-stone-200 pt-4">
+                            <p class="text-sm font-semibold text-stone-500">Total &ndash; Bayar</p>
                             <p class="mt-1 text-4xl font-black tracking-tight text-blue-600">Rp249.000</p>
                         </div>
                     </div>
@@ -422,39 +407,39 @@
                     </a>
                 </div>
 
-                <div class="relative flex flex-col rounded-3xl border border-white/40 bg-white/10 p-8 backdrop-blur">
-                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white/90 px-4 py-1 text-xs font-black uppercase tracking-wide text-blue-700 shadow-lg">
+                <div class="relative flex flex-col rounded-3xl border border-stone-200 bg-stone-50 p-8 ring-1 ring-stone-900/5">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-stone-100 px-4 py-1 text-xs font-black uppercase tracking-wide text-stone-600 shadow-lg border border-stone-200">
                         Coming Soon
                     </span>
 
                     <div class="flex flex-col items-center gap-4">
                         <img src="{{ asset('images/wabpromobform.png') }}" alt="One Time Payment"
-                             class="h-28 w-28 rounded-2xl object-contain opacity-90">
+                             class="h-28 w-28 rounded-2xl object-contain opacity-80">
                         <div class="text-center">
-                            <h3 class="text-lg font-bold text-white">One Time Payment</h3>
-                            <p class="mt-1 text-sm text-blue-100">Pembayaran sekali untuk selamanya</p>
+                            <h3 class="text-lg font-bold text-stone-900">One Time Payment</h3>
+                            <p class="mt-1 text-sm text-stone-500">Pembayaran sekali untuk selamanya</p>
                         </div>
                     </div>
 
-                    <div class="mt-8 rounded-2xl bg-white/10 p-6 ring-1 ring-white/20">
+                    <div class="mt-8 rounded-2xl bg-white p-6 ring-1 ring-stone-200">
                         <div class="flex items-baseline justify-between">
-                            <span class="text-sm font-semibold text-blue-100">Harga Normal</span>
-                            <span class="text-xl font-bold text-blue-200 line-through decoration-red-400">
+                            <span class="text-sm font-semibold text-stone-500">Harga Normal</span>
+                            <span class="text-xl font-bold text-stone-400 line-through decoration-red-400">
                                 Rp999.999
                             </span>
                         </div>
                         <div class="mt-3 flex items-baseline justify-between">
-                            <span class="text-sm font-semibold text-blue-100">Diskon</span>
-                            <span class="text-lg font-bold text-yellow-300">−Rp500.000</span>
+                            <span class="text-sm font-semibold text-stone-500">Diskon</span>
+                            <span class="text-lg font-bold text-blue-600">&minus;Rp500.000</span>
                         </div>
-                        <div class="mt-4 border-t border-white/20 pt-4">
-                            <p class="text-sm font-semibold text-blue-100">Total &ndash; Satu Kali Bayar</p>
-                            <p class="mt-1 text-4xl font-black tracking-tight text-white">Rp499.999</p>
+                        <div class="mt-4 border-t border-stone-200 pt-4">
+                            <p class="text-sm font-semibold text-stone-500">Total &ndash; Satu Kali Bayar</p>
+                            <p class="mt-1 text-4xl font-black tracking-tight text-stone-900">Rp499.999</p>
                         </div>
                     </div>
 
                     <button type="button" disabled
-                            class="mt-8 flex w-full cursor-not-allowed items-center justify-center rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-bold text-blue-100/60 opacity-70">
+                            class="mt-8 flex w-full items-center justify-center rounded-xl border border-stone-300 bg-stone-100 px-6 py-3.5 text-sm font-bold text-stone-400 opacity-70">
                         Segera Hadir
                     </button>
                 </div>
@@ -462,7 +447,7 @@
             </div>
 
             <div class="mt-12 flex flex-col items-center gap-4 text-center">
-                <p class="text-sm font-semibold text-blue-100">Metode Pembayaran</p>
+                <p class="text-sm font-semibold text-stone-500">Metode Pembayaran</p>
                 <img src="{{ asset('images/payment/payment.png') }}" alt="Metode Pembayaran"
                      class="h-12 w-auto object-contain opacity-90">
             </div>
@@ -470,15 +455,20 @@
             </div>
     </section>
 
-    <section id="testimoni" class="scroll-mt-24 bg-white py-20 lg:py-28">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="testimoni" class="relative scroll-mt-24 overflow-hidden bg-slate-50 py-20 lg:py-28">
+        <div class="pointer-events-none absolute inset-0 bg-grain opacity-50" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div class="absolute -top-24 -left-16 h-72 w-72 rounded-full bg-blue-200/40 blur-3xl"></div>
+            <div class="absolute -bottom-20 right-[-4%] h-64 w-64 rounded-full bg-sky-100/40 blur-3xl"></div>
+        </div>
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
 
-            <div class="mx-auto max-w-2xl text-center">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600">Testimoni</span>
-                <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+            <div class="reveal mx-auto max-w-2xl text-center">
+                <p class="font-serif text-lg italic text-blue-600">Apa kata mereka</p>
+                <h2 class="mt-2 text-balance text-3xl font-black tracking-tight text-stone-950 sm:text-4xl">
                     Dipercaya oleh pelanggan kami
                 </h2>
-                <p class="mt-5 text-lg leading-8 text-slate-600">
+                <p class="mx-auto mt-5 max-w-2xl text-balance text-lg leading-8 text-stone-600">
                     Geser untuk melihat ulasan dari para pelanggan.
                 </p>
             </div>
@@ -652,15 +642,25 @@
         </div>
     </section>
 
-    <section id="faq" class="scroll-mt-24 bg-slate-50/60 py-20 lg:py-28">
-        <div class="mx-auto max-w-4xl px-6 lg:px-8">
+    <section id="faq" class="relative scroll-mt-24 overflow-hidden bg-slate-50 py-20 lg:py-28">
+        <div class="pointer-events-none absolute inset-0 bg-grain opacity-50" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div class="absolute top-1/4 -left-16 h-64 w-64 rounded-full bg-blue-100/50 blur-3xl"></div>
+            <div class="absolute bottom-0 -right-12 h-56 w-56 rounded-full bg-sky-100/50 blur-3xl"></div>
+        </div>
+        <div class="relative mx-auto max-w-4xl px-6 lg:px-8">
 
-            <div class="text-center">
-                <span class="text-sm font-bold uppercase tracking-wider text-blue-600">FAQ</span>
-                <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+            <div class="reveal relative mx-auto max-w-2xl text-center">
+                <p class="font-serif text-lg italic text-blue-600">Pertanyaan Umum</p>
+                <h2 class="mt-2 text-balance text-3xl font-black tracking-tight text-stone-950 sm:text-4xl">
                     Pertanyaan yang sering ditanyakan
                 </h2>
+                <p class="mx-auto mt-5 max-w-2xl text-balance text-lg leading-8 text-stone-600">
+                    Temukan jawaban untuk pertanyaan umum tentang WABlaster PRO Mobile.
+                </p>
             </div>
+
+            <div class="faq-column mt-16 flex flex-col gap-6">
 
             <div class="faq-column mt-12 flex flex-col gap-4">
 
@@ -735,9 +735,10 @@
         </div>
     </section>
 
-    <section id="download" class="scroll-mt-24 bg-white py-20 lg:py-28">
+    <section id="download" class="scroll-mt-24 bg-slate-50 py-20 lg:py-28">
+        <div class="pointer-events-none absolute inset-0 bg-grain opacity-50" aria-hidden="true"></div>
         <div class="mx-auto max-w-5xl px-6 lg:px-8">
-            <div class="flex flex-col items-center overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-sky-500 px-6 py-16 text-center shadow-2xl shadow-blue-600/30 sm:px-16">
+            <div class="flex flex-col items-center overflow-hidden rounded-3xl bg-gradient-to-br from-blue-700 via-blue-600 to-blue-700 px-6 py-16 text-center shadow-2xl shadow-blue-600/30 sm:px-16">
 
                 <h2 class="mx-auto max-w-2xl text-3xl font-black tracking-tight text-white sm:text-4xl">
                     Siap meningkatkan pemasaran WhatsApp bisnis Anda?
@@ -747,7 +748,7 @@
                     campaign promosi secara efisien dari smartphone Anda.
                 </p>
 
-                <div id="kontak" class="mt-9 flex w-full max-w-md flex-col items-center gap-4 sm:flex-row sm:max-w-none">
+                <div id="kontak" class="mt-9 flex w-full max-w-md flex-col items-center gap-4 sm:flex-row sm:max-w-none sm:justify-center">
                     <a href="#download"
                        class="flex w-full items-center justify-center rounded-xl bg-white px-8 py-4 text-sm font-bold text-blue-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-blue-50 sm:w-auto">
                         Download Aplikasi
@@ -762,7 +763,7 @@
         </div>
     </section>
 
-    <footer class="border-t border-slate-200 bg-slate-50/60">
+    <footer class="border-t border-stone-200 bg-stone-50">
         <div class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
 
             <div class="grid gap-10 md:grid-cols-4">

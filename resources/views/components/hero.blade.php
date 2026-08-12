@@ -1,4 +1,4 @@
-<section id="beranda" class="relative overflow-hidden">
+<section id="beranda" class="relative flex min-h-screen overflow-hidden">
 
     <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-blue-100/70 via-sky-50/50 to-white"></div>
 
@@ -8,24 +8,24 @@
         <div class="animate-blob-slower absolute -bottom-24 left-1/3 h-[24rem] w-[24rem] rounded-full bg-blue-100/60 blur-3xl"></div>
     </div>
 
-    <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 pt-16 pb-20 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:pt-20 lg:pb-28">
+    <div class="mx-auto grid w-full max-w-7xl items-center gap-16 px-6 pt-16 pb-20 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:pt-20 lg:pb-28">
 
-        <div class="relative z-10 text-center lg:text-left">
+        <div class="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
 
-            <h1 class="mx-auto max-w-3xl text-4xl font-black leading-[1.08] tracking-tight text-slate-950 sm:text-5xl lg:mx-0 lg:text-6xl">
+            <h1 class="max-w-3xl text-4xl font-black leading-[1.08] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
                 Promosi WhatsApp
                 <span class="text-blue-600">Lebih Mudah.</span>
                 <span class="block text-slate-900">Lebih Cepat.</span>
                 <span class="block text-slate-900">Lebih Otomatis.</span>
             </h1>
 
-            <p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-slate-600 lg:mx-0">
+            <p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-slate-600">
                 WABlaster PRO Mobile membantu Anda mengelola pemasaran WhatsApp,
                 mengirim pesan promosi, mengelola kontak, membangun database
                 pelanggan, hingga menjalankan campaign langsung dari smartphone.
             </p>
 
-            <div class="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+            <div class="mt-9 flex w-full max-w-md flex-col items-center gap-4 sm:flex-row sm:max-w-none sm:justify-center lg:justify-start">
 
                 <a href="#download"
                    class="inline-flex w-full items-center justify-center rounded-xl bg-blue-600 px-7 py-3.5 font-bold text-white shadow-xl shadow-blue-600/25 transition hover:-translate-y-0.5 hover:bg-blue-700 sm:w-auto">
